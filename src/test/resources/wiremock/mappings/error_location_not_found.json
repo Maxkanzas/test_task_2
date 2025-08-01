@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/current.json",
+    "queryParameters": {
+      "key": {
+        "matches": ".*"
+      },
+      "q": {
+        "equalTo": "NonExistentCity123"
+      },
+      "aqi": {
+        "equalTo": "no"
+      }
+    }
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"error\":{\"code\":1006,\"message\":\"No location found matching parameter 'q'\"}}"
+  }
+} 

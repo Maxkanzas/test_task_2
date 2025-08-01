@@ -1,0 +1,1095 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Предыстория",
+        "steps": [
+          {
+            "result": {
+              "duration": 281932000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "сервис WeatherAPI запущен на порту 8080",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8080",
+                  "offset": 35
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.сервисWeatherAPIЗапущенНаПорту(int)"
+            },
+            "keyword": "Дано "
+          },
+          {
+            "result": {
+              "duration": 209000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "у меня есть валидный API ключ \"test_api_key_123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"test_api_key_123\"",
+                  "offset": 30
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.уМеняЕстьВалидныйAPIКлюч(java.lang.String)"
+            },
+            "keyword": "И "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-07-31T21:43:58.418Z",
+        "before": [
+          {
+            "result": {
+              "duration": 324272000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.weatherapi.hooks.WireMockHooks.startWireMock()"
+            }
+          }
+        ],
+        "line": 13,
+        "name": "Получение текущей погоды для различных городов",
+        "description": "",
+        "id": "тестирование-weather-api;получение-текущей-погоды-для-различных-городов",
+        "after": [
+          {
+            "result": {
+              "duration": 4381000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.weatherapi.hooks.WireMockHooks.stopWireMock()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Сценарий",
+        "steps": [
+          {
+            "result": {
+              "duration": 716751000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "я запрашиваю текущую погоду для города \"London\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"London\"",
+                  "offset": 39
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЗапрашиваюТекущуюПогодуДляГорода(java.lang.String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 2031000,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "статус ответа должен быть 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.статусОтветаДолженБыть(int)"
+            },
+            "keyword": "Тогда "
+          },
+          {
+            "result": {
+              "duration": 1595000,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "ответ содержит информацию о местоположении",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитИнформациюОМестоположении()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 203000,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "название города в ответе равно \"London\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"London\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.названиеГородаВОтветеРавно(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 187000,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "страна в ответе равна \"United Kingdom\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"United Kingdom\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.странаВОтветеРавна(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 302000,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "ответ содержит данные о текущей погоде",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитДанныеОТекущейПогоде()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 117000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "температура в Цельсиях присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.температураВЦельсияхПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 137000,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "влажность присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.влажностьПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 138000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "информация о ветре присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.информацияОВетреПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 561000,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "я логирую результат сравнения",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЛогируюРезультатСравнения()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 10298000,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "я запрашиваю текущую погоду для города \"Paris\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paris\"",
+                  "offset": 39
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЗапрашиваюТекущуюПогодуДляГорода(java.lang.String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 345000,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "статус ответа должен быть 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.статусОтветаДолженБыть(int)"
+            },
+            "keyword": "Тогда "
+          },
+          {
+            "result": {
+              "duration": 156000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "ответ содержит информацию о местоположении",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитИнформациюОМестоположении()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 155000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "название города в ответе равно \"Paris\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Paris\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.названиеГородаВОтветеРавно(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 118000,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "страна в ответе равна \"France\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"France\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.странаВОтветеРавна(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 202000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "ответ содержит данные о текущей погоде",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитДанныеОТекущейПогоде()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 92000,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "температура в Цельсиях присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.температураВЦельсияхПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 84000,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "влажность присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.влажностьПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 94000,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "информация о ветре присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.информацияОВетреПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 791000,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "я логирую результат сравнения",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЛогируюРезультатСравнения()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 9510000,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "я запрашиваю текущую погоду для города \"Tokyo\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Tokyo\"",
+                  "offset": 39
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЗапрашиваюТекущуюПогодуДляГорода(java.lang.String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 160000,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "статус ответа должен быть 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.статусОтветаДолженБыть(int)"
+            },
+            "keyword": "Тогда "
+          },
+          {
+            "result": {
+              "duration": 120000,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "ответ содержит информацию о местоположении",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитИнформациюОМестоположении()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 142000,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "название города в ответе равно \"Tokyo\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Tokyo\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.названиеГородаВОтветеРавно(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 88000,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "страна в ответе равна \"Japan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Japan\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.странаВОтветеРавна(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 122000,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "ответ содержит данные о текущей погоде",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитДанныеОТекущейПогоде()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 77000,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "температура в Цельсиях присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.температураВЦельсияхПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 121000,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "влажность присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.влажностьПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 84000,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "информация о ветре присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.информацияОВетреПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 365000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "я логирую результат сравнения",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЛогируюРезультатСравнения()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 7270000,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "я запрашиваю текущую погоду для города \"New York\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New York\"",
+                  "offset": 39
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЗапрашиваюТекущуюПогодуДляГорода(java.lang.String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 153000,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "статус ответа должен быть 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.статусОтветаДолженБыть(int)"
+            },
+            "keyword": "Тогда "
+          },
+          {
+            "result": {
+              "duration": 114000,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "ответ содержит информацию о местоположении",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитИнформациюОМестоположении()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 113000,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "название города в ответе равно \"New York\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"New York\"",
+                  "offset": 31
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.названиеГородаВОтветеРавно(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 70000,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "страна в ответе равна \"United States of America\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"United States of America\"",
+                  "offset": 22
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.странаВОтветеРавна(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 91000,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "ответ содержит данные о текущей погоде",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитДанныеОТекущейПогоде()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 66000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "температура в Цельсиях присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.температураВЦельсияхПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 67000,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "влажность присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.влажностьПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 122000,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "информация о ветре присутствует в ответе",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.информацияОВетреПрисутствуетВОтвете()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 311000,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "я логирую результат сравнения",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЛогируюРезультатСравнения()"
+            },
+            "keyword": "И "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@positive"
+          },
+          {
+            "name": "@current_weather"
+          }
+        ]
+      },
+      {
+        "line": 8,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Предыстория",
+        "steps": [
+          {
+            "result": {
+              "duration": 197000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "сервис WeatherAPI запущен на порту 8080",
+            "match": {
+              "arguments": [
+                {
+                  "val": "8080",
+                  "offset": 35
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.сервисWeatherAPIЗапущенНаПорту(int)"
+            },
+            "keyword": "Дано "
+          },
+          {
+            "result": {
+              "duration": 87000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "у меня есть валидный API ключ \"test_api_key_123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"test_api_key_123\"",
+                  "offset": 30
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.уМеняЕстьВалидныйAPIКлюч(java.lang.String)"
+            },
+            "keyword": "И "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2025-07-31T21:43:59.837Z",
+        "before": [
+          {
+            "result": {
+              "duration": 8197000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.weatherapi.hooks.WireMockHooks.startWireMock()"
+            }
+          }
+        ],
+        "line": 59,
+        "name": "Получение различных ошибок API",
+        "description": "",
+        "id": "тестирование-weather-api;получение-различных-ошибок-api",
+        "after": [
+          {
+            "result": {
+              "duration": 1398000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.weatherapi.hooks.WireMockHooks.stopWireMock()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Сценарий",
+        "steps": [
+          {
+            "result": {
+              "duration": 13082000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "я запрашиваю текущую погоду без API ключа для города \"London\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"London\"",
+                  "offset": 53
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЗапрашиваюТекущуюПогодуБезAPIКлючаДляГорода(java.lang.String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 224000,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "статус ответа должен быть 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.статусОтветаДолженБыть(int)"
+            },
+            "keyword": "Тогда "
+          },
+          {
+            "result": {
+              "duration": 119000,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "ответ содержит ошибку с кодом 1002",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1002",
+                  "offset": 30
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитОшибкуСКодом(int)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 101000,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "сообщение об ошибке равно \"API key not provided.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"API key not provided.\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.сообщениеОбОшибкеРавно(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 307000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "я логирую результат сравнения ошибки",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЛогируюРезультатСравненияОшибки()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 10654000,
+              "status": "passed"
+            },
+            "line": 66,
+            "name": "я запрашиваю текущую погоду без параметра города",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЗапрашиваюТекущуюПогодуБезПараметраГорода()"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 155000,
+              "status": "passed"
+            },
+            "line": 67,
+            "name": "статус ответа должен быть 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.статусОтветаДолженБыть(int)"
+            },
+            "keyword": "Тогда "
+          },
+          {
+            "result": {
+              "duration": 130000,
+              "status": "passed"
+            },
+            "line": 68,
+            "name": "ответ содержит ошибку с кодом 1003",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1003",
+                  "offset": 30
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитОшибкуСКодом(int)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 96000,
+              "status": "passed"
+            },
+            "line": 69,
+            "name": "сообщение об ошибке равно \"Parameter \u0027q\u0027 not provided.\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Parameter \u0027q\u0027 not provided.\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.сообщениеОбОшибкеРавно(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 208000,
+              "status": "passed"
+            },
+            "line": 70,
+            "name": "я логирую результат сравнения ошибки",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЛогируюРезультатСравненияОшибки()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 6919000,
+              "status": "passed"
+            },
+            "line": 72,
+            "name": "я запрашиваю текущую погоду с невалидным API ключом \"invalid_key_12345\" для города \"London\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"invalid_key_12345\"",
+                  "offset": 52
+                },
+                {
+                  "val": "\"London\"",
+                  "offset": 83
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЗапрашиваюТекущуюПогодуСНевалиднымAPIКлючомДляГорода(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 141000,
+              "status": "passed"
+            },
+            "line": 73,
+            "name": "статус ответа должен быть 401",
+            "match": {
+              "arguments": [
+                {
+                  "val": "401",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.статусОтветаДолженБыть(int)"
+            },
+            "keyword": "Тогда "
+          },
+          {
+            "result": {
+              "duration": 70000,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "ответ содержит ошибку с кодом 2006",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2006",
+                  "offset": 30
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитОшибкуСКодом(int)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 78000,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "сообщение об ошибке равно \"API key provided is invalid\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"API key provided is invalid\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.сообщениеОбОшибкеРавно(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 176000,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "я логирую результат сравнения ошибки",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЛогируюРезультатСравненияОшибки()"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 5528000,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "я запрашиваю текущую погоду для несуществующего города \"NonExistentCity123\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"NonExistentCity123\"",
+                  "offset": 55
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЗапрашиваюТекущуюПогодуДляНесуществующегоГорода(java.lang.String)"
+            },
+            "keyword": "Когда "
+          },
+          {
+            "result": {
+              "duration": 356000,
+              "status": "passed"
+            },
+            "line": 79,
+            "name": "статус ответа должен быть 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.статусОтветаДолженБыть(int)"
+            },
+            "keyword": "Тогда "
+          },
+          {
+            "result": {
+              "duration": 141000,
+              "status": "passed"
+            },
+            "line": 80,
+            "name": "ответ содержит ошибку с кодом 1006",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1006",
+                  "offset": 30
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.ответСодержитОшибкуСКодом(int)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 93000,
+              "status": "passed"
+            },
+            "line": 81,
+            "name": "сообщение об ошибке равно \"No location found matching parameter \u0027q\u0027\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"No location found matching parameter \u0027q\u0027\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.weatherapi.steps.WeatherApiSteps.сообщениеОбОшибкеРавно(java.lang.String)"
+            },
+            "keyword": "И "
+          },
+          {
+            "result": {
+              "duration": 224000,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "я логирую результат сравнения ошибки",
+            "match": {
+              "location": "com.weatherapi.steps.WeatherApiSteps.яЛогируюРезультатСравненияОшибки()"
+            },
+            "keyword": "И "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@negative"
+          },
+          {
+            "name": "@api_errors"
+          }
+        ]
+      }
+    ],
+    "name": "Тестирование Weather API",
+    "description": "  Как QA инженер\n  Я хочу протестировать Weather API\n  Чтобы убедиться в корректности работы сервиса получения данных о погоде",
+    "id": "тестирование-weather-api",
+    "keyword": "Функция",
+    "uri": "file:src/test/resources/features/weather_api.feature",
+    "tags": []
+  }
+]

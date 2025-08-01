@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/current.json",
+    "queryParameters": {
+      "key": {
+        "matches": ".*"
+      },
+      "aqi": {
+        "equalTo": "no"
+      }
+    }
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"error\":{\"code\":1003,\"message\":\"Parameter 'q' not provided.\"}}"
+  }
+} 

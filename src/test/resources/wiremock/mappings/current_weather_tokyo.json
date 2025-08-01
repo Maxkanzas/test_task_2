@@ -1,0 +1,64 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/current.json",
+    "queryParameters": {
+      "key": {
+        "matches": ".*"
+      },
+      "q": {
+        "equalTo": "Tokyo"
+      },
+      "aqi": {
+        "equalTo": "no"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "location": {
+        "name": "Tokyo",
+        "region": "Tokyo",
+        "country": "Japan",
+        "lat": 35.69,
+        "lon": 139.69,
+        "tz_id": "Asia/Tokyo",
+        "localtime_epoch": 1735768800,
+        "localtime": "2025-01-01 21:00"
+      },
+      "current": {
+        "last_updated_epoch": 1735768800,
+        "last_updated": "2025-01-01 21:00",
+        "temp_c": 3.2,
+        "temp_f": 37.8,
+        "is_day": 0,
+        "condition": {
+          "text": "Clear",
+          "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+          "code": 1000
+        },
+        "wind_mph": 5.4,
+        "wind_kph": 8.6,
+        "wind_degree": 270,
+        "wind_dir": "W",
+        "pressure_mb": 1025.0,
+        "pressure_in": 30.27,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 58,
+        "cloud": 10,
+        "feelslike_c": 1.1,
+        "feelslike_f": 34.0,
+        "vis_km": 20.0,
+        "vis_miles": 12.0,
+        "uv": 1.0,
+        "gust_mph": 8.9,
+        "gust_kph": 14.3
+      }
+    }
+  }
+} 

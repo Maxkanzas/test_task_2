@@ -1,0 +1,64 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/current.json",
+    "queryParameters": {
+      "key": {
+        "matches": ".*"
+      },
+      "q": {
+        "equalTo": "Paris"
+      },
+      "aqi": {
+        "equalTo": "no"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "location": {
+        "name": "Paris",
+        "region": "Ile-de-France",
+        "country": "France",
+        "lat": 48.87,
+        "lon": 2.33,
+        "tz_id": "Europe/Paris",
+        "localtime_epoch": 1735738800,
+        "localtime": "2025-01-01 13:00"
+      },
+      "current": {
+        "last_updated_epoch": 1735738800,
+        "last_updated": "2025-01-01 13:00",
+        "temp_c": 12.3,
+        "temp_f": 54.1,
+        "is_day": 1,
+        "condition": {
+          "text": "Sunny",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+          "code": 1000
+        },
+        "wind_mph": 8.1,
+        "wind_kph": 13.0,
+        "wind_degree": 180,
+        "wind_dir": "S",
+        "pressure_mb": 1020.0,
+        "pressure_in": 30.12,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 65,
+        "cloud": 25,
+        "feelslike_c": 11.2,
+        "feelslike_f": 52.2,
+        "vis_km": 15.0,
+        "vis_miles": 9.0,
+        "uv": 3.0,
+        "gust_mph": 12.5,
+        "gust_kph": 20.1
+      }
+    }
+  }
+} 

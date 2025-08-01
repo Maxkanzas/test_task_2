@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="WeatherApiTestSuite" verbose="1">
+    <test name="WeatherApiTests">
+        <classes>
+            <class name="com.weatherapi.runner.TestRunner"/>
+        </classes>
+    </test>
+</suite> 

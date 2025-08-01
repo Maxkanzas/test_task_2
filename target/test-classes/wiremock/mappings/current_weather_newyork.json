@@ -1,0 +1,64 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/current.json",
+    "queryParameters": {
+      "key": {
+        "matches": ".*"
+      },
+      "q": {
+        "equalTo": "New York"
+      },
+      "aqi": {
+        "equalTo": "no"
+      }
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "jsonBody": {
+      "location": {
+        "name": "New York",
+        "region": "New York",
+        "country": "United States of America",
+        "lat": 40.71,
+        "lon": -74.01,
+        "tz_id": "America/New_York",
+        "localtime_epoch": 1735746000,
+        "localtime": "2025-01-01 07:00"
+      },
+      "current": {
+        "last_updated_epoch": 1735746000,
+        "last_updated": "2025-01-01 07:00",
+        "temp_c": -2.1,
+        "temp_f": 28.2,
+        "is_day": 1,
+        "condition": {
+          "text": "Light snow",
+          "icon": "//cdn.weatherapi.com/weather/64x64/day/326.png",
+          "code": 1213
+        },
+        "wind_mph": 18.3,
+        "wind_kph": 29.5,
+        "wind_degree": 320,
+        "wind_dir": "NW",
+        "pressure_mb": 1008.0,
+        "pressure_in": 29.77,
+        "precip_mm": 1.2,
+        "precip_in": 0.05,
+        "humidity": 78,
+        "cloud": 90,
+        "feelslike_c": -7.8,
+        "feelslike_f": 18.0,
+        "vis_km": 8.0,
+        "vis_miles": 5.0,
+        "uv": 1.0,
+        "gust_mph": 28.4,
+        "gust_kph": 45.7
+      }
+    }
+  }
+} 

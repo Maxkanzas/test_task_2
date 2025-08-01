@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "GET",
+    "urlPath": "/v1/current.json",
+    "queryParameters": {
+      "key": {
+        "equalTo": "invalid_key_12345"
+      },
+      "q": {
+        "matches": ".*"
+      },
+      "aqi": {
+        "equalTo": "no"
+      }
+    }
+  },
+  "response": {
+    "status": 401,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"error\":{\"code\":2006,\"message\":\"API key provided is invalid\"}}"
+  }
+} 
